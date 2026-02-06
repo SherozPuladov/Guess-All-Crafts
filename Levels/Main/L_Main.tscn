@@ -1,0 +1,945 @@
+[gd_scene load_steps=160 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Main/Environment.tres" type="Environment" id=3]
+[ext_resource path="res://Levels/Main/L_Main.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Main/Materials/M_Wall_Plane.tres" type="Material" id=5]
+[ext_resource path="res://Levels/Main/Geometry/PortalCube.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Managers/CraftsManager.gd" type="Script" id=7]
+[ext_resource path="res://Crafts/Bed/bed.res" type="Resource" id=8]
+[ext_resource path="res://Levels/Main/Portal.gd" type="Script" id=9]
+[ext_resource path="res://Crafts/Bed/bed_fake.png" type="Texture" id=10]
+[ext_resource path="res://Crafts/Bed/bed.png" type="Texture" id=11]
+[ext_resource path="res://Crafts/Stick/stick.res" type="Resource" id=12]
+[ext_resource path="res://Crafts/Torch/torch.res" type="Resource" id=13]
+[ext_resource path="res://Crafts/CraftingTable/crafting_table.res" type="Resource" id=14]
+[ext_resource path="res://Crafts/Chest/chest.res" type="Resource" id=15]
+[ext_resource path="res://Crafts/Fence/fence.res" type="Resource" id=16]
+[ext_resource path="res://Crafts/Ladder/ladder.res" type="Resource" id=17]
+[ext_resource path="res://Crafts/Door/door.res" type="Resource" id=18]
+[ext_resource path="res://Crafts/Bookshelf/bookshelf.res" type="Resource" id=19]
+[ext_resource path="res://Crafts/Furnace/furnace.res" type="Resource" id=20]
+[ext_resource path="res://Crafts/ItemFrame/item_frame.res" type="Resource" id=21]
+[ext_resource path="res://Crafts/JackOLantern/jack_o_lantern.res" type="Resource" id=22]
+[ext_resource path="res://Crafts/IronDoor/iron_door.res" type="Resource" id=23]
+[ext_resource path="res://Crafts/Map/map.res" type="Resource" id=24]
+[ext_resource path="res://Crafts/Lever/lever.res" type="Resource" id=25]
+[ext_resource path="res://Crafts/Anvil/anvil.res" type="Resource" id=26]
+[ext_resource path="res://Crafts/Clock/clock.res" type="Resource" id=27]
+[ext_resource path="res://Crafts/FishingRod/fishing_rod.res" type="Resource" id=28]
+[ext_resource path="res://Crafts/Bucket/bucket.res" type="Resource" id=29]
+[ext_resource path="res://Crafts/RedstoneTorche/redstone_torche.res" type="Resource" id=30]
+[ext_resource path="res://Crafts/ArmorStand/armor_stand.tres" type="Resource" id=31]
+[ext_resource path="res://Crafts/Piston/piston.res" type="Resource" id=32]
+[ext_resource path="res://Crafts/IronBars/iron_bars.res" type="Resource" id=33]
+[ext_resource path="res://Crafts/Button/button.res" type="Resource" id=34]
+[ext_resource path="res://Crafts/Compass/compass.res" type="Resource" id=35]
+[ext_resource path="res://Crafts/TrappedChest/trapped_chest.res" type="Resource" id=36]
+[ext_resource path="res://Crafts/TripwareHook/tripwire_hook.res" type="Resource" id=37]
+[ext_resource path="res://Crafts/Shears/shears.res" type="Resource" id=38]
+[ext_resource path="res://Crafts/Trapdoor/trapdoor.res" type="Resource" id=39]
+[ext_resource path="res://Levels/Main/Audios/NetherPortal.ogg" type="AudioStream" id=40]
+[ext_resource path="res://Crafts/craft_resource.gd" type="Script" id=41]
+[ext_resource path="res://Crafts/Beacon/beacon.res" type="Resource" id=42]
+[ext_resource path="res://Crafts/DaylightSensor/daylight_sensor.tres" type="Resource" id=43]
+[ext_resource path="res://Crafts/Axe/axe.res" type="Resource" id=44]
+[ext_resource path="res://Crafts/BookAndQuill/book_and_quill.tres" type="Resource" id=45]
+[ext_resource path="res://Crafts/Cauldron/cauldron.tres" type="Resource" id=46]
+[ext_resource path="res://Crafts/Comparator/comparator.tres" type="Resource" id=47]
+[ext_resource path="res://Crafts/Glass/glass.tres" type="Resource" id=48]
+[ext_resource path="res://Crafts/FireworkRocket/firework_rocket.tres" type="Resource" id=49]
+[ext_resource path="res://Crafts/RedstoneLamp/redstone_lamp.tres" type="Resource" id=50]
+[ext_resource path="res://Crafts/Shovel/shovel.tres" type="Resource" id=51]
+[ext_resource path="res://Crafts/Painting/painting.tres" type="Resource" id=52]
+[ext_resource path="res://Crafts/FireworkStar/firework_star.tres" type="Resource" id=53]
+[ext_resource path="res://Crafts/Hoe/hoe.tres" type="Resource" id=54]
+[ext_resource path="res://Crafts/Glowstone/glowstone.tres" type="Resource" id=55]
+[ext_resource path="res://Crafts/Observer/observer.tres" type="Resource" id=56]
+[ext_resource path="res://Crafts/HayBale/hay_bale.tres" type="Resource" id=57]
+[ext_resource path="res://Crafts/Dropper/dropper.tres" type="Resource" id=58]
+[ext_resource path="res://Crafts/Sword/sword.tres" type="Resource" id=59]
+[ext_resource path="res://Crafts/Repeater/repeater.tres" type="Resource" id=60]
+[ext_resource path="res://Crafts/Hopper/hopper.tres" type="Resource" id=61]
+[ext_resource path="res://Crafts/Pickaxe/pickaxe.tres" type="Resource" id=62]
+[ext_resource path="res://Crafts/StainedGlass/stained_glass.tres" type="Resource" id=63]
+[ext_resource path="res://Crafts/Dispenser/dispenser.tres" type="Resource" id=64]
+[ext_resource path="res://Levels/Main/Audios/CorrectCraft.mp3" type="AudioStream" id=65]
+[ext_resource path="res://UserInterfase/Fonts/DF_h1.tres" type="DynamicFont" id=67]
+[ext_resource path="res://UserInterfase/ContinueButton.gd" type="Script" id=68]
+[ext_resource path="res://Managers/AudioManager.gd" type="Script" id=69]
+[ext_resource path="res://Levels/Main/Audios/Ambient.mp3" type="AudioStream" id=70]
+[ext_resource path="res://UserInterfase/CaptureMouseButton.gd" type="Script" id=71]
+[ext_resource path="res://Levels/Main/Audios/IncorrectCraft.mp3" type="AudioStream" id=72]
+[ext_resource path="res://Crafts/IronHelmet/iron_helmet.tres" type="Resource" id=73]
+[ext_resource path="res://Crafts/DiamondChestplate/diamond_chestplate.tres" type="Resource" id=74]
+[ext_resource path="res://Crafts/LeatherPants/leather_pants.tres" type="Resource" id=75]
+[ext_resource path="res://Crafts/IronBoots/iron_boots_fake.png" type="Texture" id=76]
+[ext_resource path="res://Crafts/Bow/bow.tres" type="Resource" id=77]
+[ext_resource path="res://Crafts/Shield/shield.tres" type="Resource" id=78]
+[ext_resource path="res://Crafts/Arrows/arrows.tres" type="Resource" id=79]
+[ext_resource path="res://Crafts/EnchantmentTable‌/enchantment_table‌.tres" type="Resource" id=80]
+[ext_resource path="res://Crafts/MinecartWithChest/minecart_with_chest.tres" type="Resource" id=81]
+[ext_resource path="res://Crafts/MinecartWithFurnace/minecart_with_furnace.tres" type="Resource" id=82]
+[ext_resource path="res://Crafts/Sugar/sugar.tres" type="Resource" id=83]
+[ext_resource path="res://Crafts/MinecartWithTNT/minecart_with_tnt.tres" type="Resource" id=84]
+[ext_resource path="res://Crafts/NoteBlock/note_block.tres" type="Resource" id=85]
+[ext_resource path="res://Crafts/RedDye/red_dye.tres" type="Resource" id=86]
+[ext_resource path="res://Crafts/LeatherHorseArmor/leather_horse_armor.tres" type="Resource" id=87]
+[ext_resource path="res://Crafts/MushroomStew/mushroom_stew.tres" type="Resource" id=88]
+[ext_resource path="res://Crafts/TNT/tnt.tres" type="Resource" id=89]
+[ext_resource path="res://Crafts/Bowl/bowl.tres" type="Resource" id=90]
+[ext_resource path="res://Crafts/Bread/bread.tres" type="Resource" id=91]
+[ext_resource path="res://Crafts/MinecartWithHopper/minecart_with_hopper.tres" type="Resource" id=92]
+[ext_resource path="res://Crafts/Cake/cake.tres" type="Resource" id=93]
+[ext_resource path="res://Crafts/PoweredRail/powered_rail.tres" type="Resource" id=94]
+[ext_resource path="res://Crafts/Wool/wool.tres" type="Resource" id=95]
+[ext_resource path="res://Crafts/ShulkerBox/shulker_box.tres" type="Resource" id=96]
+[ext_resource path="res://Crafts/EnderChest/ender_chest.tres" type="Resource" id=97]
+[ext_resource path="res://Crafts/GreenWool/green_wool.tres" type="Resource" id=98]
+[ext_resource path="res://Crafts/OakSign/oak_sign.tres" type="Resource" id=99]
+[ext_resource path="res://Crafts/Lead/lead.tres" type="Resource" id=100]
+[ext_resource path="res://Crafts/Rail/rail.tres" type="Resource" id=101]
+[ext_resource path="res://Crafts/DetectorRail/detector_rail.tres" type="Resource" id=102]
+[ext_resource path="res://Crafts/LightWeightedPressurePlate/light_weighted_pressure_plate.tres" type="Resource" id=103]
+[ext_resource path="res://Crafts/Stair/stair.tres" type="Resource" id=104]
+[ext_resource path="res://Crafts/ActivatorRail/activator_rail.png" type="Texture" id=105]
+[ext_resource path="res://Crafts/GlassBottle/glass_bottle.tres" type="Resource" id=106]
+[ext_resource path="res://Crafts/PumpkinPie/pumpkin_pie.tres" type="Resource" id=107]
+[ext_resource path="res://Crafts/HeavyWeightedPressurePlate/heavy_weighted_pressure_plate.tres" type="Resource" id=108]
+[ext_resource path="res://Crafts/FlintAndSteel/flint_and_steel.tres" type="Resource" id=109]
+[ext_resource path="res://Crafts/SeaLantern/sea_lantern.tres" type="Resource" id=110]
+[ext_resource path="res://Crafts/CarrotOnAStick/carrot_on_a_stick.tres" type="Resource" id=111]
+[ext_resource path="res://Crafts/EyeOfEnder/eye_of_ender.tres" type="Resource" id=112]
+[ext_resource path="res://Crafts/MagmaCream/magma_cream.tres" type="Resource" id=113]
+[ext_resource path="res://Crafts/Carpet/carpet.tres" type="Resource" id=114]
+[ext_resource path="res://Crafts/StickyPiston/sticky_piston.tres" type="Resource" id=115]
+[ext_resource path="res://Crafts/Wheat/wheat.tres" type="Resource" id=116]
+[ext_resource path="res://Crafts/SlimeBlock/slime_block.tres" type="Resource" id=117]
+[ext_resource path="res://Crafts/HoneyBlock/honey_block.tres" type="Resource" id=118]
+[ext_resource path="res://Crafts/Lectern/lectern.tres" type="Resource" id=119]
+[ext_resource path="res://Levels/Main/Materials/M_Floor_Plane.tres" type="Material" id=120]
+[ext_resource path="res://Crafts/ActivatorRail/activator_rail_fake.png" type="Texture" id=121]
+[ext_resource path="res://Crafts/IronBoots/iron_boots.png" type="Texture" id=122]
+[ext_resource path="res://UserInterfase/LivesTextureContainer.gd" type="Script" id=123]
+[ext_resource path="res://plugins/touchJoyPad.tscn" type="PackedScene" id=124]
+[ext_resource path="res://UserInterfase/Fonts/DF_h2.tres" type="DynamicFont" id=125]
+[ext_resource path="res://Levels/Main/Geometry/PlanksCube.tscn" type="PackedScene" id=126]
+[ext_resource path="res://UserInterfase/NotificatoinLabel.gd" type="Script" id=127]
+[ext_resource path="res://UserInterfase/Fonts/DF_h3.tres" type="DynamicFont" id=128]
+[ext_resource path="res://Levels/Main/Textures/obsidian.png" type="Texture" id=129]
+[ext_resource path="res://Levels/Main/Audios/Rewarded.mp3" type="AudioStream" id=130]
+[ext_resource path="res://Levels/Main/Audios/RewardFailed.mp3" type="AudioStream" id=131]
+[ext_resource path="res://Levels/Main/Audios/WinMusic.mp3" type="AudioStream" id=132]
+[ext_resource path="res://UserInterfase/IncorrectPanel.gd" type="Script" id=133]
+[ext_resource path="res://UserInterfase/InterstitialPanel.gd" type="Script" id=134]
+[ext_resource path="res://UserInterfase/AdButton.gd" type="Script" id=135]
+[ext_resource path="res://UserInterfase/pause_icon.png" type="Texture" id=136]
+[ext_resource path="res://UserInterfase/PauseTouchButton.gd" type="Script" id=137]
+[ext_resource path="res://UserInterfase/Textures/ad_button_texture.png" type="Texture" id=138]
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 41 )
+correct = ExtResource( 122 )
+incorrect = ExtResource( 76 )
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 41 )
+correct = ExtResource( 105 )
+incorrect = ExtResource( 121 )
+
+[sub_resource type="CubeMesh" id=14]
+
+[sub_resource type="SpatialMaterial" id=21]
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_color = Color( 0.972549, 0.952941, 0.670588, 1 )
+
+[sub_resource type="SpatialMaterial" id=27]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.662745, 0.254902, 0.698039, 1 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.193161, 2, 2 )
+
+[sub_resource type="CubeMesh" id=15]
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_texture = ExtResource( 129 )
+uv1_scale = Vector3( 2, 10, 2 )
+
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 1, 5, 1 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_texture = ExtResource( 129 )
+uv1_scale = Vector3( 6, 2, 2 )
+
+[sub_resource type="PlaneMesh" id=5]
+
+[sub_resource type="ArrayMesh" id=22]
+lightmap_size_hint = Vector2( 522, 522 )
+surfaces/0 = {
+"aabb": AABB( -1, 0.05, -1, 2.00001, 9.99868e-06, 2.00001 ),
+"array_data": PoolByteArray( 0, 0, 128, 63, 205, 204, 76, 61, 0, 0, 128, 63, 0, 127, 127, 64, 0, 60, 0, 60, 254, 59, 254, 59, 0, 0, 128, 63, 205, 204, 76, 61, 0, 0, 128, 191, 0, 127, 127, 64, 0, 60, 0, 0, 216, 19, 254, 59, 0, 0, 128, 191, 205, 204, 76, 61, 0, 0, 128, 63, 0, 127, 127, 64, 0, 0, 0, 60, 254, 59, 216, 19, 0, 0, 128, 191, 205, 204, 76, 61, 0, 0, 128, 191, 0, 127, 127, 64, 0, 0, 0, 0, 216, 19, 216, 19 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 2194743,
+"index_count": 6,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="PlaneMesh" id=7]
+
+[sub_resource type="BoxShape" id=8]
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.490196, 1, 0.45098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0, 0, 0, 0.392157 )
+
+[node name="L_Main" type="Spatial" groups=["Level"]]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05209, 2.92247, 10.5987 )
+
+[node name="CraftsManager" type="Node" parent="."]
+script = ExtResource( 7 )
+crafts = [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 39 ), ExtResource( 25 ), ExtResource( 34 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 35 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 33 ), ExtResource( 44 ), ExtResource( 42 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 43 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 49 ), ExtResource( 53 ), ExtResource( 28 ), ExtResource( 48 ), ExtResource( 55 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 61 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 62 ), ExtResource( 50 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 63 ), ExtResource( 59 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), SubResource( 10 ), ExtResource( 78 ), ExtResource( 77 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 93 ), ExtResource( 88 ), ExtResource( 90 ), ExtResource( 87 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 89 ), ExtResource( 99 ), ExtResource( 95 ), ExtResource( 91 ), ExtResource( 98 ), ExtResource( 83 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 100 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 84 ), SubResource( 9 ), ExtResource( 94 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 104 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 103 ), ExtResource( 108 ), ExtResource( 113 ), ExtResource( 112 ), ExtResource( 109 ), ExtResource( 114 ), ExtResource( 111 ), ExtResource( 116 ), ExtResource( 115 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 110 ) ]
+
+[node name="AudioManager" type="Node" parent="." groups=["AudioManager"]]
+pause_mode = 1
+script = ExtResource( 69 )
+
+[node name="AmbientAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 70 )
+
+[node name="CorrectCraftAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 65 )
+volume_db = -8.0
+
+[node name="IncorrectCraftAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 72 )
+volume_db = -10.0
+
+[node name="RewardedAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 130 )
+
+[node name="RewardFailedAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 131 )
+
+[node name="LivesAreOverAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 131 )
+
+[node name="PlayerWinnedAudioPlayer" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource( 132 )
+volume_db = -10.0
+
+[node name="Cubes" type="Spatial" parent="."]
+pause_mode = 1
+
+[node name="Cake" type="Spatial" parent="Cubes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10 )
+visible = false
+
+[node name="MeshInstance2" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 1.9, -2 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 21 )
+
+[node name="Torche3" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.3, 0, 0, 0, 0.1, -0.4, 2.3, -2.3 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 26 )
+
+[node name="Torche2" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, 0.4, 2.2, -2 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 26 )
+
+[node name="Torche1" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4, 2.1, -1.5 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 26 )
+
+[node name="Berry" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, -0.7, 2, -1.7 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry2" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, -0.6, 2, -2.5 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry3" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, 0.1, 2, -2.5 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry4" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, 0.7, 2, -2.4 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry5" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, 0.6, 2, -1.4 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry6" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, -3.72529e-08, 2, -2 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="Berry7" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 0.1, 0, 0, 0, 0.05, 0, 0, 0, 0.1, -3.72529e-08, 2, -1.3 )
+mesh = SubResource( 14 )
+material/0 = SubResource( 27 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Cake"]
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 1, 0, 1.4, -2 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="PlanksCube" parent="Cubes/Cake" instance=ExtResource( 126 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+
+[node name="Label3D" type="Label3D" parent="Cubes/Cake"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 4, -2 )
+cast_shadow = 0
+text = "CONGRATULATIONS"
+font = ExtResource( 67 )
+autowrap = true
+width = 600.0
+
+[node name="OmniLight" type="OmniLight" parent="Cubes/Cake"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2 )
+light_color = Color( 1, 0.993973, 0.845703, 1 )
+
+[node name="Bracing" type="Spatial" parent="Cubes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.1, -12 )
+
+[node name="LeftPortal" type="Area" parent="Cubes/Bracing"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.9, 0 )
+collision_mask = 2
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing/LeftPortal"]
+shape = SubResource( 1 )
+
+[node name="LeftPortalBanner" type="Sprite3D" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0.5 )
+sorting_offset = 100.0
+cast_shadow = 0
+use_in_baked_light = true
+transparent = false
+double_sided = false
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Cubes/Bracing"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2, 0 )
+stream = ExtResource( 40 )
+pitch_scale = 3.0
+autoplay = true
+
+[node name="Portal" type="Spatial" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+__meta__ = {
+"_editor_description_": "# Code by Sheroz Pulatov sherozpulatov3@gmail.com"
+}
+
+[node name="PortalCube4" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0 )
+
+[node name="PortalCube5" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="PortalCube6" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0 )
+
+[node name="PortalCube7" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="PortalCube8" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+
+[node name="PortalCube9" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="PortalCube10" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0 )
+
+[node name="PortalCube11" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="PortalCube12" parent="Cubes/Bracing/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+
+[node name="LeftBrace" type="StaticBody" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing/LeftBrace"]
+transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing/LeftBrace"]
+shape = SubResource( 17 )
+
+[node name="RightBrace" type="StaticBody" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing/RightBrace"]
+transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing/RightBrace"]
+shape = SubResource( 17 )
+
+[node name="CeilingBrace" type="StaticBody" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing/CeilingBrace"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 18 )
+
+[node name="FloorBrace" type="StaticBody" parent="Cubes/Bracing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing/FloorBrace"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 18 )
+
+[node name="Bracing2" type="Spatial" parent="Cubes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.1, -12 )
+
+[node name="RightPortal" type="Area" parent="Cubes/Bracing2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.9, 0 )
+collision_mask = 2
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing2/RightPortal"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103859, 0.0998368, 0 )
+shape = SubResource( 1 )
+
+[node name="RightPortalBanner" type="Sprite3D" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0.5 )
+sorting_offset = 100.0
+cast_shadow = 0
+use_in_baked_light = true
+transparent = false
+double_sided = false
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+stream = ExtResource( 40 )
+pitch_scale = 3.0
+autoplay = true
+
+[node name="Portal" type="Spatial" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+__meta__ = {
+"_editor_description_": "# Code by Sheroz Pulatov sherozpulatov3@gmail.com"
+}
+
+[node name="PortalCube4" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0 )
+
+[node name="PortalCube5" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="PortalCube6" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0 )
+
+[node name="PortalCube7" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="PortalCube8" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+
+[node name="PortalCube9" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="PortalCube10" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0 )
+
+[node name="PortalCube11" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="PortalCube12" parent="Cubes/Bracing2/Portal" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+
+[node name="LeftBrace" type="StaticBody" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing2/LeftBrace"]
+transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing2/LeftBrace"]
+shape = SubResource( 17 )
+
+[node name="RightBrace" type="StaticBody" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing2/RightBrace"]
+transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/Bracing2/RightBrace"]
+shape = SubResource( 17 )
+
+[node name="CeilingBrace" type="StaticBody" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing2/CeilingBrace"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 18 )
+
+[node name="FloorBrace" type="StaticBody" parent="Cubes/Bracing2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/Bracing2/FloorBrace"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 15 )
+material/0 = SubResource( 18 )
+
+[node name="FloorPlane" type="StaticBody" parent="Cubes"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/FloorPlane"]
+transform = Transform( 13, 0, 0, 0, 1, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+software_skinning_transform_normals = false
+material/0 = ExtResource( 120 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/FloorPlane/MeshInstance"]
+mesh = SubResource( 22 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/FloorPlane"]
+transform = Transform( 13, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="CeilingPlane" type="StaticBody" parent="Cubes"]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 8, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/CeilingPlane"]
+transform = Transform( 13, 0, 0, 0, 1, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+software_skinning_transform_normals = false
+material/0 = ExtResource( 120 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/CeilingPlane"]
+transform = Transform( 13, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="WallPlane" type="StaticBody" parent="Cubes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 4, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/WallPlane"]
+transform = Transform( -1.74846e-07, -1, 0, 4, -4.37114e-08, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 7 )
+software_skinning_transform_normals = false
+material/0 = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/WallPlane"]
+transform = Transform( 0, 0, 0, 0, 4, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 8 )
+
+[node name="WallPlane2" type="StaticBody" parent="Cubes"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13, 4, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/WallPlane2"]
+transform = Transform( -1.74846e-07, -1, 0, 4, -4.37114e-08, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 7 )
+software_skinning_transform_normals = false
+material/0 = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/WallPlane2"]
+transform = Transform( 0, 0, 0, 0, 4, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 8 )
+
+[node name="WallPlane3" type="StaticBody" parent="Cubes"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, -13 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/WallPlane3"]
+transform = Transform( -1.74846e-07, -1, 0, 4, -4.37114e-08, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 7 )
+software_skinning_transform_normals = false
+material/0 = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/WallPlane3"]
+transform = Transform( 0, 0, 0, 0, 4, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 8 )
+
+[node name="WallPlane4" type="StaticBody" parent="Cubes"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 4, 13 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Cubes/WallPlane4"]
+transform = Transform( -1.74846e-07, -1, 0, 4, -4.37114e-08, 0, 0, 0, 13, 0, 0, 0 )
+cast_shadow = 0
+use_in_baked_light = true
+mesh = SubResource( 7 )
+software_skinning_transform_normals = false
+material/0 = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Cubes/WallPlane4"]
+transform = Transform( 0, 0, 0, 0, 4, 0, 0, 0, 13, 0, 0, 0 )
+shape = SubResource( 8 )
+
+[node name="Lighting" type="Node" parent="."]
+pause_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "# Code by Sheroz Pulatov sherozpulatov3@gmail.com"
+}
+
+[node name="BakedLightmap" type="BakedLightmap" parent="Lighting"]
+extents = Vector3( 14, 9, 14 )
+
+[node name="LeftPortalLight" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.1, -9 )
+light_color = Color( 1, 0.94902, 0.756863, 1 )
+light_energy = 0.7
+omni_range = 15.0
+
+[node name="RightPortalLight" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4.1, -9 )
+light_color = Color( 1, 0.94902, 0.756863, 1 )
+light_energy = 0.7
+omni_range = 15.0
+
+[node name="LevelUI" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="MainPanel" type="Panel" parent="LevelUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 23 )
+
+[node name="ProgressBar" type="ProgressBar" parent="LevelUI/MainPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -300.0
+margin_top = 15.0
+margin_right = 300.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+step = 1.0
+percent_visible = false
+
+[node name="NotificatoinLabel" type="Label" parent="LevelUI/MainPanel" groups=["NotificationLabel"]]
+pause_mode = 1
+anchor_right = 1.0
+margin_top = 60.0
+margin_bottom = 84.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 128 )
+text = "Good luck"
+align = 1
+valign = 1
+script = ExtResource( 127 )
+
+[node name="LivesTextureContainer" type="HBoxContainer" parent="LevelUI/MainPanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -50.0
+margin_right = 64.0
+margin_bottom = -10.0
+rect_clip_content = true
+alignment = 1
+script = ExtResource( 123 )
+
+[node name="GamePadViewport" type="ViewportContainer" parent="LevelUI/MainPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="GamePad" parent="LevelUI/MainPanel/GamePadViewport" instance=ExtResource( 124 )]
+position = Vector2( 365, 745 )
+scale = Vector2( 2.5, 2.5 )
+AnalogTapToShow = true
+
+[node name="CaptureMouseButton" type="TextureButton" parent="LevelUI/MainPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+button_mask = 7
+expand = true
+script = ExtResource( 71 )
+
+[node name="PauseTouchButton" type="Button" parent="LevelUI/MainPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -165.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = 165.0
+custom_fonts/font = ExtResource( 67 )
+icon = ExtResource( 136 )
+icon_align = 1
+expand_icon = true
+script = ExtResource( 137 )
+
+[node name="IncorrectPanel" type="Panel" parent="LevelUI"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 11 )
+script = ExtResource( 133 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="LevelUI/IncorrectPanel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -240.0
+margin_bottom = -211.0
+custom_fonts/font = ExtResource( 67 )
+text = "INCORRECT"
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="LevelUI/IncorrectPanel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -140.0
+margin_bottom = -111.0
+custom_fonts/font = ExtResource( 125 )
+text = "TRY_AGAIN"
+align = 1
+
+[node name="PausePanel" type="Panel" parent="LevelUI"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 24 )
+
+[node name="GameTitle" type="Label" parent="LevelUI/PausePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -500.0
+margin_right = 400.0
+margin_bottom = -100.0
+custom_fonts/font = ExtResource( 67 )
+text = "GAME_TITLE"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ContinueButton" type="Button" parent="LevelUI/PausePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -108.0
+margin_right = 250.0
+margin_bottom = -8.0
+script = ExtResource( 68 )
+
+[node name="Label" type="Label" parent="LevelUI/PausePanel/ContinueButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 125 )
+text = "CONTINUE"
+align = 1
+valign = 1
+
+[node name="AdButton" type="Button" parent="LevelUI/PausePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 33.0
+margin_right = 250.0
+margin_bottom = 133.0
+icon = ExtResource( 138 )
+icon_align = 1
+expand_icon = true
+script = ExtResource( 135 )
+
+[node name="Label" type="Label" parent="LevelUI/PausePanel/AdButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_right = -100.0
+custom_fonts/font = ExtResource( 128 )
+text = "REPLENISH_LIVES"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="InstructionLabel" type="Label" parent="LevelUI/PausePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = 160.0
+margin_right = 450.0
+margin_bottom = 489.0
+custom_fonts/font = ExtResource( 125 )
+text = "INSTRUCTION"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="InterstitialPanel" type="Panel" parent="LevelUI"]
+pause_mode = 1
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 24 )
+script = ExtResource( 134 )
+
+[node name="InsterstitialLabel" type="Label" parent="LevelUI/InterstitialPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -416.0
+margin_right = 312.0
+margin_bottom = -87.0
+custom_fonts/font = ExtResource( 125 )
+text = "INTERSTITIAL"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TimerLabel" type="Label" parent="LevelUI/InterstitialPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -316.0
+margin_top = -42.5
+margin_right = 316.0
+margin_bottom = 42.5
+custom_fonts/font = ExtResource( 125 )
+text = "Advertisement after: 3 sec"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": "# Code by Sheroz Pulatov sherozpulatov3@gmail.com"
+}
+
+[node name="AdvertisementTimer" type="Timer" parent="LevelUI/InterstitialPanel"]
+wait_time = 60.0
+one_shot = true
+
+[node name="WaitTimer1" type="Timer" parent="LevelUI/InterstitialPanel"]
+one_shot = true
+
+[node name="WaitTimer2" type="Timer" parent="LevelUI/InterstitialPanel"]
+one_shot = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="WaitTimer3" type="Timer" parent="LevelUI/InterstitialPanel"]
+one_shot = true
+
+[connection signal="body_entered" from="Cubes/Bracing/LeftPortal" to="Cubes/Bracing/LeftPortal" method="body_entered"]
+[connection signal="body_entered" from="Cubes/Bracing2/RightPortal" to="Cubes/Bracing2/RightPortal" method="body_entered"]

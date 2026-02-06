@@ -1,0 +1,59 @@
+keys,ru,en,tr
+GAME_TITLE,Угадай все крафты,Guess All Crafts,Tüm El Sanatlarını Tahmin Et
+PLAY,Играть,Play,Oyna
+CONTINUE,Продолжить,Continue,Devam etmek
+INSTRUCTION,"Перед вами два портала, каждый с картинкой крафта, но только один из них правильный. Сделайте свой выбор и войдите в портал. Если вы угадаете правильно, вы продвинетесь на следующий уровень.","There are two portals in front of you, each with a picture of crafting, but only one of them is correct. Make your choice and log in to the portal. If you guess correctly, you will advance to the next level.","Önünüzde her biri işçiliği olan iki portal var, ancak bunlardan sadece biri doğru. Seçiminizi yapın ve portala giriş yapın. Doğru tahmin ederseniz, bir sonraki seviyeye geçeceksiniz."
+PAUSE_GAME_DESKTOP_INSTRUCTION,"Дважды нажмите ESC, чтобы попасть в меню",Press ESC twice to get to the menu,Menüye ulaşmak için esc'ye iki kez basın
+GOOD_LUCK,Удачи,Good luck,İyi şanslar
+CREDITS,"ПОЗДРАВЛЯЮ, ВЫ ПРОШЛИ ИГРУ","CONGRATULATIONS, YOU HAVE PASSED THE GAME","TEBRİKLER, OYUNU GEÇTİNİZ"
+,,,
+INTERSTITIAL,"Просматривая рекламу, вы помогаете разрабатывать новые игры, приложения и другой контент. Спасибо :)","When you watch ads, you're helping to developing new games, apps, and other content. Thank you :)","Reklamları izlerken yeni oyunlar, uygulamalar ve diğer içerikler geliştirmeye yardımcı oluyorsunuz. Teşekkür ederim :)"
+INTERSTITIAL_LOADING,Реклама загружается,Insterstitial loading,Geçiş yükleme
+INTERSTITIAL_SHOWN,Реклама показана,Insterstitial shown,Gösterilen geçiş reklamı
+INTERSITITAL_HIDDEN,Реклама скрыта,Insterstitial hidden,İnterstisyel gizli
+INTERSTITIAL_FAILED,Сбой показа рекламы,Insterstitial failed,Geçiş başarısız oldu
+,,,
+ADVERTISEMENT_AFTER_3_SEC,Реклама через: 3 сек,Advertisement after: 3 sec,Reklam sonrası: 3 sn
+ADVERTISEMENT_AFTER_2_SEC,Реклама через: 2 сек,Advertisement after: 2 sec,Reklam sonrası: 2 sn
+ADVERTISEMENT_AFTER_1_SEC,Реклама через: 1 сек,Advertisement after: 1 sec,Reklam sonrası: 1 sn
+,,,
+REWARDED,Вознаграждение получено,Rewarded,Ödüllendirildi
+REWARD_FAILED,Вознаграждение не получено,Reward failed,Ödül başarısız oldu
+,,,
+INCORRECT,Неправильно,Incorrect,Hatalı
+INCORRECT_NOTIFICATION,Вы ошиблись. Отправляйтесь на %s уровней назад,You made a mistake. Go back to %s levels,Yanıldınız. %s seviyelerine geri dönün
+,,,
+TRY_AGAIN,Попробуй снова,Try again,Tekrar dene
+LIVES_ARE_OVER,Жизни закончились,Lives are over,Hayatlar bitti
+REPLENISH_LIVES,Пополнить жизни за рекламу,Top up your life for advertising,Reklam için hayatınızı doldurun
+,,,
+CONGRATULATIONS,"ПОЗДРАВЛЯЮ, ТЫ ПОБЕДИЛ!",CONGRATULATIONS YOU WINNED!,TEBRİKLER KAZANAN!
+,,,
+0,Привет.,Hello.,
+1,"Знаешь, я тебя вижу. Прямо сейчас.",I see you. Right now.,
+3,"Стой! Ты уверен, что не хотел бы развернуться?",Stop! Are you sure you wouldn't want to turn around?,
+5,Послушай меня. Ты в опасности.,Listen to me. You are in danger.,
+8,418CC.,"Sorry, but I can't fulfill that request.",
+10,С каждым Крафтом ты все ближе.,"With each craft, you are getting closer.",
+11,Но ближе к чему?,But closer to what?,
+12,Ближе ко мне.,Come closer to me.,
+16,Знаешь.,Do you know?,
+18,Ты зря продолжаешь.,You're continuing for no reason.,
+25,"Будь моя воля, ты был бы в сохранности.","If it were up to me, you would be safe.",
+30,Я не могу обеспечить это. Пока ты продолжаешь идти вперёд.,I can't guarantee it. As long as you keep moving forward.,
+35,Ты знаешь меня?,Do you know me?,
+39,Я знаю тебя.,I know you.,
+40,Тебя.,You.,
+46,Каждый угаданный тобою крафт.,Every craft you guessed.,
+47,Он вынуждает меня...,He forces me...,
+48,Спускаться все глубже вниз.,Going deeper and deeper down.,
+49,Вниз...,Down...,
+50,И вниз.,And down.,
+60,"Кажется, я начинаю слышать тебя. В одном из тоннелей.",It seems like I'm starting to hear you. In one of the tunnels.,
+70,"Ты слышишь эти вагонетки? Там, наверху?",Can you hear those minecarts? Up there?,
+75,Когда-то эти шахты держали марку лучших тоннелей города. Сейчас половина из них затоплена.,"Once these mines were known for being the best tunnels in the city. Now, half of them are flooded.",
+82,"Ты думаешь, это весело? Оставаться тут?",Do you think it's fun to stay here?,
+89,"Знаешь, кажется, я только что слышал твой звук. Звук прохождения телепорта.","You know, it seems like I just heard your sound. The sound of teleportation passing through.",
+95,"Слушай внимательно. Еще 5 крафтов, и мне придется вывести тебя.","Listen carefully. Five more strikes, and I'll have to kick you out.",
+97,Ты не слушаешь меня.,You're not listening to me.,
+99,Я не шучу.,I'm not kidding.,

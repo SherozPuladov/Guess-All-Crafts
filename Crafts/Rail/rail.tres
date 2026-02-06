@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Crafts/Rail/rail_fake.png" type="Texture" id=1]
+[ext_resource path="res://Crafts/Rail/rail.png" type="Texture" id=2]
+[ext_resource path="res://Crafts/craft_resource.gd" type="Script" id=3]
+
+[resource]
+script = ExtResource( 3 )
+correct = ExtResource( 2 )
+incorrect = ExtResource( 1 )

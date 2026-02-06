@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/MovementController.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Head.tscn" type="PackedScene" id=2]
+
+[node name="Player" instance=ExtResource( 1 )]
+speed = 12
+
+[node name="Collision" parent="." index="0"]
+transform = Transform( 1.95, 0, 0, 0, -8.52372e-08, -2, 0, 1.95, -8.74228e-08, 0, 0, 0 )
+
+[node name="Head" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )

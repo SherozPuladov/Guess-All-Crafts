@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NetherPortal.ogg-bc98df421365a95f7ddd880dc3f19f86.oggstr"
+
+[deps]
+
+source_file="res://Levels/Main/Audios/NetherPortal.ogg"
+dest_files=[ "res://.import/NetherPortal.ogg-bc98df421365a95f7ddd880dc3f19f86.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

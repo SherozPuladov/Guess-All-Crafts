@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rewarded.mp3-a46057419a39e7bc27a2f3417109f245.mp3str"
+
+[deps]
+
+source_file="res://Levels/Main/Audios/Rewarded.mp3"
+dest_files=[ "res://.import/Rewarded.mp3-a46057419a39e7bc27a2f3417109f245.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
